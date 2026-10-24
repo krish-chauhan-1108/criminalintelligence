@@ -70,6 +70,10 @@ function DashboardLayout() {
       <div className="mt-auto border-t border-border pt-5">
         <p className="truncate text-sm text-foreground">{profile?.name}</p>
         <p className="truncate text-xs text-muted-foreground">{profile?.email}</p>
+        <Link to="/lawyer" className="mt-3 flex items-center justify-between text-xs text-foreground/80 hover:text-foreground border border-border px-2.5 py-1.5 transition-colors">
+          <span>Advocate Workspace</span>
+          <span className="font-mono text-[0.65rem] text-amber-400">/lawyer →</span>
+        </Link>
         <button onClick={signOut} className="mt-3 text-xs uppercase tracking-[0.2em] text-muted-foreground hover:text-foreground">Log out</button>
       </div>
     </div>

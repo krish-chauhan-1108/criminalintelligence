@@ -20,6 +20,16 @@ import { Route as AuthenticatedDashboardHelpRouteImport } from './routes/_authen
 import { Route as AuthenticatedDashboardLawyersRouteImport } from './routes/_authenticated/dashboard.lawyers'
 import { Route as AuthenticatedDashboardResearchRouteImport } from './routes/_authenticated/dashboard.research'
 
+import { Route as AuthenticatedLawyerRouteImport } from './routes/_authenticated/lawyer'
+import { Route as AuthenticatedLawyerIndexRouteImport } from './routes/_authenticated/lawyer.index'
+import { Route as AuthenticatedLawyerDrafterRouteImport } from './routes/_authenticated/lawyer.drafter'
+import { Route as AuthenticatedLawyerCitationsRouteImport } from './routes/_authenticated/lawyer.citations'
+import { Route as AuthenticatedLawyerNetworkRouteImport } from './routes/_authenticated/lawyer.network'
+import { Route as AuthenticatedLawyerProfileRouteImport } from './routes/_authenticated/lawyer.profile'
+import { Route as AuthenticatedLawyerReferralsRouteImport } from './routes/_authenticated/lawyer.referrals'
+import { Route as AuthenticatedLawyerDocumentsRouteImport } from './routes/_authenticated/lawyer.documents'
+import { Route as AuthenticatedLawyerResearchRouteImport } from './routes/_authenticated/lawyer.research'
+
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -76,6 +86,60 @@ const AuthenticatedDashboardResearchRoute =
     getParentRoute: () => AuthenticatedDashboardRoute,
   } as any)
 
+const AuthenticatedLawyerRoute = AuthenticatedLawyerRouteImport.update({
+  id: '/lawyer',
+  path: '/lawyer',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedLawyerIndexRoute =
+  AuthenticatedLawyerIndexRouteImport.update({
+    id: '/',
+    path: '/',
+    getParentRoute: () => AuthenticatedLawyerRoute,
+  } as any)
+const AuthenticatedLawyerDrafterRoute =
+  AuthenticatedLawyerDrafterRouteImport.update({
+    id: '/drafter',
+    path: '/drafter',
+    getParentRoute: () => AuthenticatedLawyerRoute,
+  } as any)
+const AuthenticatedLawyerCitationsRoute =
+  AuthenticatedLawyerCitationsRouteImport.update({
+    id: '/citations',
+    path: '/citations',
+    getParentRoute: () => AuthenticatedLawyerRoute,
+  } as any)
+const AuthenticatedLawyerNetworkRoute =
+  AuthenticatedLawyerNetworkRouteImport.update({
+    id: '/network',
+    path: '/network',
+    getParentRoute: () => AuthenticatedLawyerRoute,
+  } as any)
+const AuthenticatedLawyerProfileRoute =
+  AuthenticatedLawyerProfileRouteImport.update({
+    id: '/profile',
+    path: '/profile',
+    getParentRoute: () => AuthenticatedLawyerRoute,
+  } as any)
+const AuthenticatedLawyerReferralsRoute =
+  AuthenticatedLawyerReferralsRouteImport.update({
+    id: '/referrals',
+    path: '/referrals',
+    getParentRoute: () => AuthenticatedLawyerRoute,
+  } as any)
+const AuthenticatedLawyerDocumentsRoute =
+  AuthenticatedLawyerDocumentsRouteImport.update({
+    id: '/documents',
+    path: '/documents',
+    getParentRoute: () => AuthenticatedLawyerRoute,
+  } as any)
+const AuthenticatedLawyerResearchRoute =
+  AuthenticatedLawyerResearchRouteImport.update({
+    id: '/research',
+    path: '/research',
+    getParentRoute: () => AuthenticatedLawyerRoute,
+  } as any)
+
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
@@ -86,7 +150,17 @@ export interface FileRoutesByFullPath {
   '/dashboard/lawyers': typeof AuthenticatedDashboardLawyersRoute
   '/dashboard/research': typeof AuthenticatedDashboardResearchRoute
   '/dashboard/': typeof AuthenticatedDashboardIndexRoute
+  '/lawyer': typeof AuthenticatedLawyerRouteWithChildren
+  '/lawyer/drafter': typeof AuthenticatedLawyerDrafterRoute
+  '/lawyer/citations': typeof AuthenticatedLawyerCitationsRoute
+  '/lawyer/network': typeof AuthenticatedLawyerNetworkRoute
+  '/lawyer/profile': typeof AuthenticatedLawyerProfileRoute
+  '/lawyer/referrals': typeof AuthenticatedLawyerReferralsRoute
+  '/lawyer/documents': typeof AuthenticatedLawyerDocumentsRoute
+  '/lawyer/research': typeof AuthenticatedLawyerResearchRoute
+  '/lawyer/': typeof AuthenticatedLawyerIndexRoute
 }
+
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
@@ -96,7 +170,16 @@ export interface FileRoutesByTo {
   '/dashboard/lawyers': typeof AuthenticatedDashboardLawyersRoute
   '/dashboard/research': typeof AuthenticatedDashboardResearchRoute
   '/dashboard': typeof AuthenticatedDashboardIndexRoute
+  '/lawyer/drafter': typeof AuthenticatedLawyerDrafterRoute
+  '/lawyer/citations': typeof AuthenticatedLawyerCitationsRoute
+  '/lawyer/network': typeof AuthenticatedLawyerNetworkRoute
+  '/lawyer/profile': typeof AuthenticatedLawyerProfileRoute
+  '/lawyer/referrals': typeof AuthenticatedLawyerReferralsRoute
+  '/lawyer/documents': typeof AuthenticatedLawyerDocumentsRoute
+  '/lawyer/research': typeof AuthenticatedLawyerResearchRoute
+  '/lawyer': typeof AuthenticatedLawyerIndexRoute
 }
+
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
@@ -109,7 +192,17 @@ export interface FileRoutesById {
   '/_authenticated/dashboard/lawyers': typeof AuthenticatedDashboardLawyersRoute
   '/_authenticated/dashboard/research': typeof AuthenticatedDashboardResearchRoute
   '/_authenticated/dashboard/': typeof AuthenticatedDashboardIndexRoute
+  '/_authenticated/lawyer': typeof AuthenticatedLawyerRouteWithChildren
+  '/_authenticated/lawyer/drafter': typeof AuthenticatedLawyerDrafterRoute
+  '/_authenticated/lawyer/citations': typeof AuthenticatedLawyerCitationsRoute
+  '/_authenticated/lawyer/network': typeof AuthenticatedLawyerNetworkRoute
+  '/_authenticated/lawyer/profile': typeof AuthenticatedLawyerProfileRoute
+  '/_authenticated/lawyer/referrals': typeof AuthenticatedLawyerReferralsRoute
+  '/_authenticated/lawyer/documents': typeof AuthenticatedLawyerDocumentsRoute
+  '/_authenticated/lawyer/research': typeof AuthenticatedLawyerResearchRoute
+  '/_authenticated/lawyer/': typeof AuthenticatedLawyerIndexRoute
 }
+
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
@@ -122,6 +215,15 @@ export interface FileRouteTypes {
     | '/dashboard/lawyers'
     | '/dashboard/research'
     | '/dashboard/'
+    | '/lawyer'
+    | '/lawyer/drafter'
+    | '/lawyer/citations'
+    | '/lawyer/network'
+    | '/lawyer/profile'
+    | '/lawyer/referrals'
+    | '/lawyer/documents'
+    | '/lawyer/research'
+    | '/lawyer/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -132,6 +234,14 @@ export interface FileRouteTypes {
     | '/dashboard/lawyers'
     | '/dashboard/research'
     | '/dashboard'
+    | '/lawyer/drafter'
+    | '/lawyer/citations'
+    | '/lawyer/network'
+    | '/lawyer/profile'
+    | '/lawyer/referrals'
+    | '/lawyer/documents'
+    | '/lawyer/research'
+    | '/lawyer'
   id:
     | '__root__'
     | '/'
@@ -144,8 +254,18 @@ export interface FileRouteTypes {
     | '/_authenticated/dashboard/lawyers'
     | '/_authenticated/dashboard/research'
     | '/_authenticated/dashboard/'
+    | '/_authenticated/lawyer'
+    | '/_authenticated/lawyer/drafter'
+    | '/_authenticated/lawyer/citations'
+    | '/_authenticated/lawyer/network'
+    | '/_authenticated/lawyer/profile'
+    | '/_authenticated/lawyer/referrals'
+    | '/_authenticated/lawyer/documents'
+    | '/_authenticated/lawyer/research'
+    | '/_authenticated/lawyer/'
   fileRoutesById: FileRoutesById
 }
+
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
@@ -224,6 +344,69 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedDashboardResearchRouteImport
       parentRoute: typeof AuthenticatedDashboardRoute
     }
+    '/_authenticated/lawyer': {
+      id: '/_authenticated/lawyer'
+      path: '/lawyer'
+      fullPath: '/lawyer'
+      preLoaderRoute: typeof AuthenticatedLawyerRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/lawyer/': {
+      id: '/_authenticated/lawyer/'
+      path: '/'
+      fullPath: '/lawyer/'
+      preLoaderRoute: typeof AuthenticatedLawyerIndexRouteImport
+      parentRoute: typeof AuthenticatedLawyerRoute
+    }
+    '/_authenticated/lawyer/drafter': {
+      id: '/_authenticated/lawyer/drafter'
+      path: '/drafter'
+      fullPath: '/lawyer/drafter'
+      preLoaderRoute: typeof AuthenticatedLawyerDrafterRouteImport
+      parentRoute: typeof AuthenticatedLawyerRoute
+    }
+    '/_authenticated/lawyer/citations': {
+      id: '/_authenticated/lawyer/citations'
+      path: '/citations'
+      fullPath: '/lawyer/citations'
+      preLoaderRoute: typeof AuthenticatedLawyerCitationsRouteImport
+      parentRoute: typeof AuthenticatedLawyerRoute
+    }
+    '/_authenticated/lawyer/network': {
+      id: '/_authenticated/lawyer/network'
+      path: '/network'
+      fullPath: '/lawyer/network'
+      preLoaderRoute: typeof AuthenticatedLawyerNetworkRouteImport
+      parentRoute: typeof AuthenticatedLawyerRoute
+    }
+    '/_authenticated/lawyer/profile': {
+      id: '/_authenticated/lawyer/profile'
+      path: '/profile'
+      fullPath: '/lawyer/profile'
+      preLoaderRoute: typeof AuthenticatedLawyerProfileRouteImport
+      parentRoute: typeof AuthenticatedLawyerRoute
+    }
+    '/_authenticated/lawyer/referrals': {
+      id: '/_authenticated/lawyer/referrals'
+      path: '/referrals'
+      fullPath: '/lawyer/referrals'
+      preLoaderRoute: typeof AuthenticatedLawyerReferralsRouteImport
+      parentRoute: typeof AuthenticatedLawyerRoute
+    }
+    '/_authenticated/lawyer/documents': {
+      id: '/_authenticated/lawyer/documents'
+      path: '/documents'
+      fullPath: '/lawyer/documents'
+      preLoaderRoute: typeof AuthenticatedLawyerDocumentsRouteImport
+      parentRoute: typeof AuthenticatedLawyerRoute
+    }
+    '/_authenticated/lawyer/research': {
+      id: '/_authenticated/lawyer/research'
+      path: '/research'
+      fullPath: '/lawyer/research'
+      preLoaderRoute: typeof AuthenticatedLawyerResearchRouteImport
+      parentRoute: typeof AuthenticatedLawyerRoute
+    }
   }
 }
 
@@ -252,12 +435,39 @@ const AuthenticatedDashboardRouteWithChildren =
     AuthenticatedDashboardRouteChildren,
   )
 
+interface AuthenticatedLawyerRouteChildren {
+  AuthenticatedLawyerIndexRoute: typeof AuthenticatedLawyerIndexRoute
+  AuthenticatedLawyerDrafterRoute: typeof AuthenticatedLawyerDrafterRoute
+  AuthenticatedLawyerCitationsRoute: typeof AuthenticatedLawyerCitationsRoute
+  AuthenticatedLawyerNetworkRoute: typeof AuthenticatedLawyerNetworkRoute
+  AuthenticatedLawyerProfileRoute: typeof AuthenticatedLawyerProfileRoute
+  AuthenticatedLawyerReferralsRoute: typeof AuthenticatedLawyerReferralsRoute
+  AuthenticatedLawyerDocumentsRoute: typeof AuthenticatedLawyerDocumentsRoute
+  AuthenticatedLawyerResearchRoute: typeof AuthenticatedLawyerResearchRoute
+}
+
+const AuthenticatedLawyerRouteChildren: AuthenticatedLawyerRouteChildren = {
+  AuthenticatedLawyerIndexRoute: AuthenticatedLawyerIndexRoute,
+  AuthenticatedLawyerDrafterRoute: AuthenticatedLawyerDrafterRoute,
+  AuthenticatedLawyerCitationsRoute: AuthenticatedLawyerCitationsRoute,
+  AuthenticatedLawyerNetworkRoute: AuthenticatedLawyerNetworkRoute,
+  AuthenticatedLawyerProfileRoute: AuthenticatedLawyerProfileRoute,
+  AuthenticatedLawyerReferralsRoute: AuthenticatedLawyerReferralsRoute,
+  AuthenticatedLawyerDocumentsRoute: AuthenticatedLawyerDocumentsRoute,
+  AuthenticatedLawyerResearchRoute: AuthenticatedLawyerResearchRoute,
+}
+
+const AuthenticatedLawyerRouteWithChildren =
+  AuthenticatedLawyerRoute._addFileChildren(AuthenticatedLawyerRouteChildren)
+
 interface AuthenticatedRouteRouteChildren {
   AuthenticatedDashboardRoute: typeof AuthenticatedDashboardRouteWithChildren
+  AuthenticatedLawyerRoute: typeof AuthenticatedLawyerRouteWithChildren
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedDashboardRoute: AuthenticatedDashboardRouteWithChildren,
+  AuthenticatedLawyerRoute: AuthenticatedLawyerRouteWithChildren,
 }
 
 const AuthenticatedRouteRouteWithChildren =

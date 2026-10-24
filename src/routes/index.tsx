@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect } from "react";
 
 export const Route = createFileRoute("/")({
@@ -143,7 +143,7 @@ function Index() {
                 <p className="text-lg">{x}</p>
               </div>
             ))}
-            <a href="#cta" className="btn-ink mt-8 self-start">Join as a Legal Professional</a>
+            <Link to="/lawyer" className="btn-ink mt-8 self-start">Access Lawyer Workspace</Link>
           </div>
         </div>
       </section>
