@@ -8,7 +8,7 @@ import {
   Scripts,
   type ErrorComponentProps,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -113,11 +113,45 @@ function RootShell({ children }: { children: ReactNode }) {
   );
 }
 
+function GlobalAnnouncementBanner() {
+  const [banner, setBanner] = useState<{ enabled: boolean; text: string } | null>(null);
+
+  useEffect(() => {
+    function loadBanner() {
+      try {
+        const stored = localStorage.getItem("trana_announcement_banner");
+        if (stored) {
+          setBanner(JSON.parse(stored));
+        }
+      } catch {
+        // ignore
+      }
+    }
+    loadBanner();
+    window.addEventListener("trana-announcement-change", loadBanner);
+    window.addEventListener("storage", loadBanner);
+    return () => {
+      window.removeEventListener("trana-announcement-change", loadBanner);
+      window.removeEventListener("storage", loadBanner);
+    };
+  }, []);
+
+  if (!banner?.enabled || !banner?.text) return null;
+
+  return (
+    <div className="bg-white text-black px-4 py-2 text-center text-xs font-mono tracking-wider border-b border-neutral-300 z-50 sticky top-0 flex items-center justify-center gap-2 shadow-sm">
+      <span className="h-1.5 w-1.5 rounded-full bg-amber-500 animate-pulse" />
+      <span>{banner.text}</span>
+    </div>
+  );
+}
+
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
     <QueryClientProvider client={queryClient}>
+      <GlobalAnnouncementBanner />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>

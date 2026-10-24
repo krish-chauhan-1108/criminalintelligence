@@ -30,6 +30,16 @@ import { Route as AuthenticatedLawyerReferralsRouteImport } from './routes/_auth
 import { Route as AuthenticatedLawyerDocumentsRouteImport } from './routes/_authenticated/lawyer.documents'
 import { Route as AuthenticatedLawyerResearchRouteImport } from './routes/_authenticated/lawyer.research'
 
+import { Route as FoundersRouteImport } from './routes/founders'
+import { Route as FoundersIndexRouteImport } from './routes/founders.index'
+import { Route as FoundersUsersRouteImport } from './routes/founders.users'
+import { Route as FoundersLawyersRouteImport } from './routes/founders.lawyers'
+import { Route as FoundersAnalysesRouteImport } from './routes/founders.analyses'
+import { Route as FoundersConsultationsRouteImport } from './routes/founders.consultations'
+import { Route as FoundersResearchLogsRouteImport } from './routes/founders.research-logs'
+import { Route as FoundersHealthRouteImport } from './routes/founders.health'
+import { Route as FoundersSettingsRouteImport } from './routes/founders.settings'
+
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -140,6 +150,53 @@ const AuthenticatedLawyerResearchRoute =
     getParentRoute: () => AuthenticatedLawyerRoute,
   } as any)
 
+// Founders routes
+const FoundersRoute = FoundersRouteImport.update({
+  id: '/founders',
+  path: '/founders',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FoundersIndexRoute = FoundersIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => FoundersRoute,
+} as any)
+const FoundersUsersRoute = FoundersUsersRouteImport.update({
+  id: '/users',
+  path: '/users',
+  getParentRoute: () => FoundersRoute,
+} as any)
+const FoundersLawyersRoute = FoundersLawyersRouteImport.update({
+  id: '/lawyers',
+  path: '/lawyers',
+  getParentRoute: () => FoundersRoute,
+} as any)
+const FoundersAnalysesRoute = FoundersAnalysesRouteImport.update({
+  id: '/analyses',
+  path: '/analyses',
+  getParentRoute: () => FoundersRoute,
+} as any)
+const FoundersConsultationsRoute = FoundersConsultationsRouteImport.update({
+  id: '/consultations',
+  path: '/consultations',
+  getParentRoute: () => FoundersRoute,
+} as any)
+const FoundersResearchLogsRoute = FoundersResearchLogsRouteImport.update({
+  id: '/research-logs',
+  path: '/research-logs',
+  getParentRoute: () => FoundersRoute,
+} as any)
+const FoundersHealthRoute = FoundersHealthRouteImport.update({
+  id: '/health',
+  path: '/health',
+  getParentRoute: () => FoundersRoute,
+} as any)
+const FoundersSettingsRoute = FoundersSettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => FoundersRoute,
+} as any)
+
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/auth': typeof AuthRoute
@@ -159,6 +216,15 @@ export interface FileRoutesByFullPath {
   '/lawyer/documents': typeof AuthenticatedLawyerDocumentsRoute
   '/lawyer/research': typeof AuthenticatedLawyerResearchRoute
   '/lawyer/': typeof AuthenticatedLawyerIndexRoute
+  '/founders': typeof FoundersRouteWithChildren
+  '/founders/users': typeof FoundersUsersRoute
+  '/founders/lawyers': typeof FoundersLawyersRoute
+  '/founders/analyses': typeof FoundersAnalysesRoute
+  '/founders/consultations': typeof FoundersConsultationsRoute
+  '/founders/research-logs': typeof FoundersResearchLogsRoute
+  '/founders/health': typeof FoundersHealthRoute
+  '/founders/settings': typeof FoundersSettingsRoute
+  '/founders/': typeof FoundersIndexRoute
 }
 
 export interface FileRoutesByTo {
@@ -178,6 +244,14 @@ export interface FileRoutesByTo {
   '/lawyer/documents': typeof AuthenticatedLawyerDocumentsRoute
   '/lawyer/research': typeof AuthenticatedLawyerResearchRoute
   '/lawyer': typeof AuthenticatedLawyerIndexRoute
+  '/founders/users': typeof FoundersUsersRoute
+  '/founders/lawyers': typeof FoundersLawyersRoute
+  '/founders/analyses': typeof FoundersAnalysesRoute
+  '/founders/consultations': typeof FoundersConsultationsRoute
+  '/founders/research-logs': typeof FoundersResearchLogsRoute
+  '/founders/health': typeof FoundersHealthRoute
+  '/founders/settings': typeof FoundersSettingsRoute
+  '/founders': typeof FoundersIndexRoute
 }
 
 export interface FileRoutesById {
@@ -201,6 +275,15 @@ export interface FileRoutesById {
   '/_authenticated/lawyer/documents': typeof AuthenticatedLawyerDocumentsRoute
   '/_authenticated/lawyer/research': typeof AuthenticatedLawyerResearchRoute
   '/_authenticated/lawyer/': typeof AuthenticatedLawyerIndexRoute
+  '/founders': typeof FoundersRouteWithChildren
+  '/founders/users': typeof FoundersUsersRoute
+  '/founders/lawyers': typeof FoundersLawyersRoute
+  '/founders/analyses': typeof FoundersAnalysesRoute
+  '/founders/consultations': typeof FoundersConsultationsRoute
+  '/founders/research-logs': typeof FoundersResearchLogsRoute
+  '/founders/health': typeof FoundersHealthRoute
+  '/founders/settings': typeof FoundersSettingsRoute
+  '/founders/': typeof FoundersIndexRoute
 }
 
 export interface FileRouteTypes {
@@ -224,6 +307,15 @@ export interface FileRouteTypes {
     | '/lawyer/documents'
     | '/lawyer/research'
     | '/lawyer/'
+    | '/founders'
+    | '/founders/users'
+    | '/founders/lawyers'
+    | '/founders/analyses'
+    | '/founders/consultations'
+    | '/founders/research-logs'
+    | '/founders/health'
+    | '/founders/settings'
+    | '/founders/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -242,6 +334,14 @@ export interface FileRouteTypes {
     | '/lawyer/documents'
     | '/lawyer/research'
     | '/lawyer'
+    | '/founders/users'
+    | '/founders/lawyers'
+    | '/founders/analyses'
+    | '/founders/consultations'
+    | '/founders/research-logs'
+    | '/founders/health'
+    | '/founders/settings'
+    | '/founders'
   id:
     | '__root__'
     | '/'
@@ -263,6 +363,15 @@ export interface FileRouteTypes {
     | '/_authenticated/lawyer/documents'
     | '/_authenticated/lawyer/research'
     | '/_authenticated/lawyer/'
+    | '/founders'
+    | '/founders/users'
+    | '/founders/lawyers'
+    | '/founders/analyses'
+    | '/founders/consultations'
+    | '/founders/research-logs'
+    | '/founders/health'
+    | '/founders/settings'
+    | '/founders/'
   fileRoutesById: FileRoutesById
 }
 
@@ -270,6 +379,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
   AuthRoute: typeof AuthRoute
+  FoundersRoute: typeof FoundersRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
@@ -407,6 +517,69 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedLawyerResearchRouteImport
       parentRoute: typeof AuthenticatedLawyerRoute
     }
+    '/founders': {
+      id: '/founders'
+      path: '/founders'
+      fullPath: '/founders'
+      preLoaderRoute: typeof FoundersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/founders/': {
+      id: '/founders/'
+      path: '/'
+      fullPath: '/founders/'
+      preLoaderRoute: typeof FoundersIndexRouteImport
+      parentRoute: typeof FoundersRoute
+    }
+    '/founders/users': {
+      id: '/founders/users'
+      path: '/users'
+      fullPath: '/founders/users'
+      preLoaderRoute: typeof FoundersUsersRouteImport
+      parentRoute: typeof FoundersRoute
+    }
+    '/founders/lawyers': {
+      id: '/founders/lawyers'
+      path: '/lawyers'
+      fullPath: '/founders/lawyers'
+      preLoaderRoute: typeof FoundersLawyersRouteImport
+      parentRoute: typeof FoundersRoute
+    }
+    '/founders/analyses': {
+      id: '/founders/analyses'
+      path: '/analyses'
+      fullPath: '/founders/analyses'
+      preLoaderRoute: typeof FoundersAnalysesRouteImport
+      parentRoute: typeof FoundersRoute
+    }
+    '/founders/consultations': {
+      id: '/founders/consultations'
+      path: '/consultations'
+      fullPath: '/founders/consultations'
+      preLoaderRoute: typeof FoundersConsultationsRouteImport
+      parentRoute: typeof FoundersRoute
+    }
+    '/founders/research-logs': {
+      id: '/founders/research-logs'
+      path: '/research-logs'
+      fullPath: '/founders/research-logs'
+      preLoaderRoute: typeof FoundersResearchLogsRouteImport
+      parentRoute: typeof FoundersRoute
+    }
+    '/founders/health': {
+      id: '/founders/health'
+      path: '/health'
+      fullPath: '/founders/health'
+      preLoaderRoute: typeof FoundersHealthRouteImport
+      parentRoute: typeof FoundersRoute
+    }
+    '/founders/settings': {
+      id: '/founders/settings'
+      path: '/settings'
+      fullPath: '/founders/settings'
+      preLoaderRoute: typeof FoundersSettingsRouteImport
+      parentRoute: typeof FoundersRoute
+    }
   }
 }
 
@@ -473,10 +646,37 @@ const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
 const AuthenticatedRouteRouteWithChildren =
   AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
 
+// Founders Route Children
+interface FoundersRouteChildren {
+  FoundersIndexRoute: typeof FoundersIndexRoute
+  FoundersUsersRoute: typeof FoundersUsersRoute
+  FoundersLawyersRoute: typeof FoundersLawyersRoute
+  FoundersAnalysesRoute: typeof FoundersAnalysesRoute
+  FoundersConsultationsRoute: typeof FoundersConsultationsRoute
+  FoundersResearchLogsRoute: typeof FoundersResearchLogsRoute
+  FoundersHealthRoute: typeof FoundersHealthRoute
+  FoundersSettingsRoute: typeof FoundersSettingsRoute
+}
+
+const FoundersRouteChildren: FoundersRouteChildren = {
+  FoundersIndexRoute: FoundersIndexRoute,
+  FoundersUsersRoute: FoundersUsersRoute,
+  FoundersLawyersRoute: FoundersLawyersRoute,
+  FoundersAnalysesRoute: FoundersAnalysesRoute,
+  FoundersConsultationsRoute: FoundersConsultationsRoute,
+  FoundersResearchLogsRoute: FoundersResearchLogsRoute,
+  FoundersHealthRoute: FoundersHealthRoute,
+  FoundersSettingsRoute: FoundersSettingsRoute,
+}
+
+const FoundersRouteWithChildren =
+  FoundersRoute._addFileChildren(FoundersRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
   AuthRoute: AuthRoute,
+  FoundersRoute: FoundersRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
