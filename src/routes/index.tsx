@@ -38,7 +38,7 @@ function Index() {
           <div className="hidden gap-8 text-sm text-muted-foreground md:flex">
             <a href="#who" className="hover:text-foreground">Who we help</a>
             <a href="#features" className="hover:text-foreground">Features</a>
-            <a href="#lawyers" className="hover:text-foreground">For Lawyers</a>
+            <Link to="/lawyer" className="hover:text-foreground">For Lawyers</Link>
             <a href="#how" className="hover:text-foreground">How it works</a>
           </div>
           <a href="#cta" className="btn-solid !px-4 !py-2.5 !text-[0.7rem]">Get Legal Guidance</a>
@@ -197,7 +197,11 @@ function Index() {
             </div>
             <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
               {["About", "For Lawyers", "Legal Research", "Privacy Policy", "Contact"].map((l) => (
-                <a key={l} href="#top" className="hover:text-foreground">{l}</a>
+                l === "For Lawyers" ? (
+                  <Link key={l} to="/lawyer" className="hover:text-foreground">{l}</Link>
+                ) : (
+                  <a key={l} href="#top" className="hover:text-foreground">{l}</a>
+                )
               ))}
             </div>
           </div>

@@ -72,8 +72,11 @@ function AuthPage() {
     <div className="flex min-h-screen items-center justify-center bg-background px-6">
       <div className="w-full max-w-md">
         <Link to="/" className="font-display text-3xl font-semibold tracking-[0.25em] text-foreground">TRANA</Link>
-        <p className="mt-1 text-xs text-muted-foreground">त्राण — Protection. Delivered.</p>
-        <h1 className="mt-10 font-display text-4xl text-foreground">{mode === "in" ? "Welcome back" : "Create your account"}</h1>
+        <h1 className="mt-10 font-display text-4xl text-foreground">
+          {mode === "in"
+            ? (dest?.includes("lawyer") ? "Welcome back lawyer" : "Welcome back")
+            : (dest?.includes("lawyer") ? "Create your lawyer account" : "Create your account")}
+        </h1>
         <button onClick={google} className="btn-line mt-8 w-full">Continue with Google</button>
         <div className="my-6 flex items-center gap-4 text-xs uppercase tracking-[0.2em] text-muted-foreground">
           <span className="h-px flex-1 bg-border" />or<span className="h-px flex-1 bg-border" />

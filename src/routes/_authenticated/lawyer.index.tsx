@@ -120,7 +120,7 @@ function LawyerOverview() {
             <span className="text-white">{lawyer?.courts || "Supreme Court & High Court"}</span>
           </div>
           <h1 className="mt-2 font-display text-4xl md:text-5xl font-medium text-white">
-            Welcome, {lawyer?.full_name}
+            Welcome back lawyer, {lawyer?.full_name}
           </h1>
           <p className="mt-2 text-sm text-[#999999]">
             Manage client referrals, draft court pleadings with AI, and access statutory citations.
