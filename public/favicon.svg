@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141721" />
+      <stop offset="50%" stop-color="#0E1017" />
+      <stop offset="100%" stop-color="#07080B" />
+    </linearGradient>
+
+    <!-- Gold Accent Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2CA" />
+      <stop offset="25%" stop-color="#F2CD60" />
+      <stop offset="70%" stop-color="#D4A02A" />
+      <stop offset="100%" stop-color="#9A7016" />
+    </linearGradient>
+
+    <!-- Subtle Border Gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F2CD60" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#D4A02A" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#7A5810" stop-opacity="0.4" />
+    </linearGradient>
+
+    <!-- Radial Glow behind emblem -->
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E5C158" stop-opacity="0.18" />
+      <stop offset="60%" stop-color="#D4A02A" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#D4A02A" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Squircle Badge Container -->
+  <rect x="16" y="16" width="480" height="480" rx="108" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="12" />
+
+  <!-- Ambient Golden Glow -->
+  <circle cx="256" cy="256" r="180" fill="url(#centerGlow)" />
+
+  <!-- Scales of Justice Emblem -->
+  <g fill="url(#goldGrad)" stroke="url(#goldGrad)">
+    <!-- Top Spire / Finial (Diamond & Spearhead of Truth) -->
+    <path d="M 256 68 L 268 94 L 256 120 L 244 94 Z" stroke-width="2" />
+    <circle cx="256" cy="122" r="6" stroke-width="0" />
+
+    <!-- Center Fulcrum Ring & Collar -->
+    <circle cx="256" cy="154" r="18" fill="none" stroke-width="7" />
+    <circle cx="256" cy="154" r="6" stroke-width="0" />
+
+    <!-- Horizontal Balance Beam -->
+    <path d="M 104 150 C 104 146, 252 148, 256 148 C 260 148, 408 146, 408 150 C 408 158, 260 160, 256 160 C 252 160, 104 158, 104 150 Z" stroke-width="1" />
+
+    <!-- Left & Right Beam End Eyelets -->
+    <circle cx="104" cy="154" r="11" fill="none" stroke-width="6" />
+    <circle cx="408" cy="154" r="11" fill="none" stroke-width="6" />
+
+    <!-- Central Pillar / Column -->
+    <rect x="248" y="172" width="16" height="206" rx="4" stroke-width="1" />
+    <!-- Pillar Decorative Collars -->
+    <rect x="242" y="186" width="28" height="10" rx="4" stroke-width="0" />
+    <rect x="240" y="360" width="32" height="12" rx="4" stroke-width="0" />
+
+    <!-- Base Pedestal (Layered Plinths of Stability) -->
+    <path d="M 188 382 L 324 382 L 332 404 L 180 404 Z" stroke-linejoin="round" stroke-width="2" />
+    <rect x="156" y="404" width="200" height="22" rx="6" stroke-width="1" />
+    <rect x="140" y="426" width="232" height="14" rx="4" opacity="0.8" stroke-width="0" />
+
+    <!-- Left Scale Pan & Suspension Chains -->
+    <!-- Chains -->
+    <line x1="104" y1="165" x2="52" y2="284" stroke-width="5" stroke-linecap="round" />
+    <line x1="104" y1="165" x2="156" y2="284" stroke-width="5" stroke-linecap="round" />
+    <!-- Pan Dish -->
+    <path d="M 44 284 C 44 336, 164 336, 164 284 Z" stroke-linejoin="round" stroke-width="5" />
+    <!-- Pan Rim -->
+    <line x1="38" y1="284" x2="170" y2="284" stroke-width="7" stroke-linecap="round" />
+
+    <!-- Right Scale Pan & Suspension Chains -->
+    <!-- Chains -->
+    <line x1="408" y1="165" x2="356" y2="284" stroke-width="5" stroke-linecap="round" />
+    <line x1="408" y1="165" x2="460" y2="284" stroke-width="5" stroke-linecap="round" />
+    <!-- Pan Dish -->
+    <path d="M 348 284 C 348 336, 468 336, 468 284 Z" stroke-linejoin="round" stroke-width="5" />
+    <!-- Pan Rim -->
+    <line x1="342" y1="284" x2="474" y2="284" stroke-width="7" stroke-linecap="round" />
+  </g>
+</svg>
