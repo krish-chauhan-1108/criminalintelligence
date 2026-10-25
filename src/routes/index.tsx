@@ -61,6 +61,7 @@ function Index() {
         <div className="reveal mt-10 flex flex-wrap gap-4">
           <a href="#cta" onClick={(e)=>{e.preventDefault(); setModalOpen(true);}} className="btn-solid">Get Legal Guidance</a>
           <a href="#cta" className="btn-line">Talk to a Lawyer</a>
+          <p className="mt-2 text-sm text-gray-400">Our team for verified lawyers are coming soon</p>
         </div>
         <p className="reveal mt-8 max-w-md text-xs text-muted-foreground">{Disclaimer}</p>
       </section>
