@@ -61,7 +61,6 @@ function Index() {
         <div className="reveal mt-10 flex flex-col gap-4 md:flex-row">
           <a href="#cta" onClick={(e)=>{e.preventDefault(); setModalOpen(true);}} className="btn-solid">Get Legal Guidance</a>
           <a href="#cta" className="btn-line">Talk to a Lawyer</a>
-<p className="mt-4 text-sm text-muted-foreground md:hidden">TRANA isn&apos;t just for people seeking help. It&apos;s a platform where lawyers and legal professionals can connect with clients, collaborate with peers, and access tools that make their practice more efficient.</p>
 
         </div>
         <p className="reveal mt-8 max-w-md text-xs text-muted-foreground">{Disclaimer}</p>
@@ -176,7 +175,7 @@ function Index() {
       </section>
 
       {/* Statement */}
-      <section className="bg-primary py-32 text-primary-foreground">
+      <section className="bg-primary py-32 text-primary-foreground hidden md:block">
         <p className="reveal mx-auto max-w-5xl px-6 text-center font-display text-4xl leading-tight md:text-6xl">
           TRANA is your legal guide — <em>not your lawyer.</em><br />We exist to make sure you always reach one.
         </p>
@@ -191,6 +190,9 @@ function Index() {
             <a href="#cta" onClick={(e)=>{e.preventDefault(); setModalOpen(true);}} className="btn-solid">Get Legal Guidance</a>
             <a href="#cta" onClick={(e)=>{e.preventDefault(); setModalOpen(true);}} className="btn-line">Talk to a Lawyer</a>
           </div>
+          <p className="mt-8 font-display text-xl leading-tight text-muted-foreground md:hidden">
+            TRANA is your legal guide — <em>not your lawyer.</em><br />We exist to make sure you always reach one.
+          </p>
         </div>
 {/* Modal */}
 {modalOpen && (
