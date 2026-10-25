@@ -84,20 +84,20 @@ function Index() {
       </section>
 
       {/* Features */}
-      <section id="features" className="bg-paper py-10 md:py-28 text-ink">
+      <section id="features" className="py-10 md:py-28">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
-          <div className="reveal"><Eyebrow light>02 — What you can do</Eyebrow><H2 light>Your Legal First Aid —<br />All in One Place</H2></div>
-          <div className="mt-8 md:mt-16 grid grid-cols-1 gap-px bg-paper-border md:grid-cols-2">
+          <div className="reveal"><Eyebrow>02 — What you can do</Eyebrow><H2>Your Legal First Aid —<br />All in One Place</H2></div>
+          <div className="mt-8 md:mt-16 grid gap-6 md:gap-10 grid-cols-2 md:grid-cols-4">
             {[
               ["Understand Legal Documents", "Upload or describe any legal situation and get a plain-language explanation of what it means and what to do next."],
               ["Find the Right Lawyer", "TRANA connects you to verified legal professionals. Arrange a consultation by call or chat — directly through the platform."],
               ["Legal Research & Citations", "Find relevant case law with citations, timelines, and judgments from the Supreme Court, High Courts, and lower courts."],
               ["Connect With Experts", "Beyond lawyers, connect with legal professionals and experts across different areas of law."],
             ].map(([t, b], n) => (
-              <div key={t} className="reveal bg-paper p-5 md:p-14">
-                <span className="font-display text-4xl md:text-5xl text-ink-muted">0{n + 1}</span>
-                <h3 className="mt-4 md:mt-6 font-display text-2xl md:text-3xl font-medium">{t}</h3>
-                <p className="mt-3 md:mt-4 max-w-md font-light leading-relaxed text-ink-muted">{b}</p>
+              <div key={t} className="reveal border-t border-primary pt-4 md:pt-6">
+                <span className="text-xs tracking-[0.25em] text-muted-foreground">0{n + 1}</span>
+                <h3 className="mt-3 md:mt-4 font-display text-xl md:text-2xl">{t}</h3>
+                <p className="mt-2 md:mt-3 text-sm font-light leading-relaxed text-muted-foreground">{b}</p>
               </div>
             ))}
           </div>
