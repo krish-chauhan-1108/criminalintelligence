@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -29,6 +29,7 @@ function Index() {
     document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
     return () => io.disconnect();
   }, []);
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <div className="bg-background text-foreground">
@@ -41,7 +42,7 @@ function Index() {
             <Link to="/lawyer" className="hover:text-foreground">For Lawyers</Link>
             <a href="#how" className="hover:text-foreground">How it works</a>
           </div>
-          <a href="#cta" className="btn-solid !px-4 !py-2.5 !text-[0.7rem]">Get Legal Guidance</a>
+          <a href="#cta" onClick={(e)=>{e.preventDefault(); setModalOpen(true);}} className="btn-solid !px-4 !py-2.5 !text-[0.7rem]">Get Legal Guidance</a>
         </div>
       </nav>
 
@@ -55,7 +56,7 @@ function Index() {
           TRANA makes legal information easier to understand and connects you with the right lawyer — when it matters most.
         </p>
         <div className="reveal mt-10 flex flex-wrap gap-4">
-          <a href="#cta" className="btn-solid">Get Legal Guidance</a>
+          <a href="#cta" onClick={(e)=>{e.preventDefault(); setModalOpen(true);}} className="btn-solid">Get Legal Guidance</a>
           <a href="#cta" className="btn-line">Talk to a Lawyer</a>
         </div>
         <p className="reveal mt-8 max-w-md text-xs text-muted-foreground">{Disclaimer}</p>
@@ -182,10 +183,22 @@ function Index() {
           <h2 className="font-display text-6xl font-medium md:text-8xl">Don't face it alone.</h2>
           <p className="mt-6 text-lg font-light text-muted-foreground">Get legal guidance or connect with a lawyer today.</p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <a href="#cta" className="btn-solid">Get Legal Guidance</a>
-            <a href="#cta" className="btn-line">Talk to a Lawyer</a>
+            <a href="#cta" onClick={(e)=>{e.preventDefault(); setModalOpen(true);}} className="btn-solid">Get Legal Guidance</a>
+            <a href="#cta" onClick={(e)=>{e.preventDefault(); setModalOpen(true);}} className="btn-line">Talk to a Lawyer</a>
           </div>
         </div>
+{/* Modal */}
+{modalOpen && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70">
+    <div className="bg-[#0A0A0A] p-8 rounded-lg relative w-96">
+      <button onClick={() => setModalOpen(false)} className="absolute top-2 right-2 text-white text-xl font-bold">✕</button>
+      <h2 className="text-white text-xl mb-4">We're Launching Soon</h2>
+      <p className="text-gray-400 mb-4">TRANA is almost ready. Leave your email and we will notify you the moment we go live.</p>
+      <input type="email" placeholder="Your email" className="w-full p-2 mb-4 bg-white text-black border border-black" />
+      <button className="w-full bg-white text-black py-2">Notify Me</button>
+    </div>
+  </div>
+)}
       </section>
 
       <footer className="bg-secondary py-16">
@@ -196,13 +209,19 @@ function Index() {
               <p className="mt-2 font-display italic text-muted-foreground">त्राणा — Protection. Delivered.</p>
             </div>
             <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
-              {["About", "For Lawyers", "Legal Research", "Privacy Policy", "Contact"].map((l) => (
-                l === "For Lawyers" ? (
-                  <Link key={l} to="/lawyer" className="hover:text-foreground">{l}</Link>
-                ) : (
-                  <a key={l} href="#top" className="hover:text-foreground">{l}</a>
-                )
-              ))}
+              {["About", "For Lawyers", "Legal Research", "Privacy Policy", "Contact"].map((l) => {
+                if (l === "For Lawyers") {
+                  return <Link key={l} to="/lawyer" className="hover:text-foreground">{l}</Link>;
+                } else if (l === "About") {
+                  return <Link key={l} to="/about" className="hover:text-foreground">{l}</Link>;
+                } else if (l === "Privacy Policy") {
+                  return <Link key={l} to="/privacy-policy" className="hover:text-foreground">{l}</Link>;
+                } else if (l === "Contact") {
+                  return <Link key={l} to="/contact" className="hover:text-foreground">{l}</Link>;
+                } else {
+                  return <a key={l} href="#top" className="hover:text-foreground">{l}</a>;
+                }
+              })}
             </div>
           </div>
           <p className="mt-12 max-w-2xl text-xs leading-relaxed text-muted-foreground">
