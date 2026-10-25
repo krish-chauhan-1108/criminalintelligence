@@ -212,8 +212,8 @@ function Index() {
               <p className="font-display text-2xl md:text-3xl font-semibold tracking-[0.25em]">TRANA</p>
               <p className="mt-1 md:mt-2 font-display italic text-muted-foreground">त्राणा — Protection. Delivered.</p>
             </div>
-            <div className="flex flex-wrap gap-x-5 gap-y-2 text-[13px] text-muted-foreground md:text-sm">
-              {["About", "For Lawyers", "Legal Research", "Privacy Policy", "Contact"].map((l) => {
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-[13px] text-muted-foreground md:text-sm">
+              {["About", "For Lawyers", "Legal Research", "Privacy Policy", "Contact", "Team Login"].map((l) => {
                 if (l === "For Lawyers") {
                   return <Link key={l} to="/lawyer" className="hover:text-foreground">{l}</Link>;
                 } else if (l === "About") {
@@ -222,6 +222,8 @@ function Index() {
                   return <Link key={l} to="/privacy-policy" className="hover:text-foreground">{l}</Link>;
                 } else if (l === "Contact") {
                   return <Link key={l} to="/contact" className="hover:text-foreground">{l}</Link>;
+                } else if (l === "Team Login") {
+                  return <Link key={l} to="/founders" className="hover:text-foreground border-l border-border pl-4">{l}</Link>;
                 } else {
                   return <a key={l} href="#top" className="hover:text-foreground text-[13px] md:text-sm">{l}</a>;
                 }
