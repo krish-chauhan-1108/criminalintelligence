@@ -46,7 +46,15 @@ function Index() {
         </div>
       </nav>
 
-      {/* Hero */}
+      {/* Chat Section */}
+<section id="chat" className="bg-[#0A0A0A] py-12">
+  <div className="mx-auto max-w-3xl px-6 text-center">
+    <h2 className="text-white text-3xl mb-4" style={{fontFamily: "'Cormorant Garamond', serif"}}>Chat with TRANA</h2>
+    <p className="text-gray-400 mb-8">Ask any question about your criminal law situation in India — in Hindi or English</p>
+    <ChatBox />
+  </div>
+</section>
+{/* Hero */}
       <section id="top" className="mx-auto flex min-h-[88vh] max-w-7xl flex-col justify-center px-6 py-24">
         <p className="reveal mb-8 font-display text-xl italic text-muted-foreground">त्राणा — Protection. Delivered.</p>
         <h1 className="reveal font-display text-6xl leading-[0.95] font-medium md:text-8xl lg:text-[8.5rem]">
