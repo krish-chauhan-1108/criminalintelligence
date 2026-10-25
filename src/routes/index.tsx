@@ -178,13 +178,13 @@ function Index() {
       </section>
 
       {/* CTA */}
-      <section id="cta" className="border-b border-border py-12 md:py-32 text-center bg-background text-foreground">
+      <section id="cta" className="border-b border-border py-12 md:py-32 text-center bg-background text-foreground md:bg-paper md:text-ink md:border-paper-border">
         <div className="reveal mx-auto max-w-3xl px-4 md:px-6">
           <h2 className="font-display text-4xl md:text-6xl lg:text-8xl font-medium">Don't face it alone.</h2>
-          <p className="mt-4 md:mt-6 text-base md:text-lg font-light text-muted-foreground">Get legal guidance or connect with a lawyer today.</p>
+          <p className="mt-4 md:mt-6 text-base md:text-lg font-light text-muted-foreground md:text-ink-muted">Get legal guidance or connect with a lawyer today.</p>
           <div className="mt-6 md:mt-10 flex flex-col sm:flex-row flex-wrap justify-center gap-3 md:gap-4">
-            <a href="#cta" onClick={(e)=>{e.preventDefault(); setModalOpen(true);}} className="btn-solid">Get Legal Guidance</a>
-            <a href="#cta" onClick={(e)=>{e.preventDefault(); setModalOpen(true);}} className="btn-solid sm:w-auto w-full">Talk to a Lawyer</a>
+            <a href="#cta" onClick={(e)=>{e.preventDefault(); setModalOpen(true);}} className="btn-solid md:btn-ink">Get Legal Guidance</a>
+            <a href="#cta" onClick={(e)=>{e.preventDefault(); setModalOpen(true);}} className="btn-solid md:btn-ink sm:w-auto w-full">Talk to a Lawyer</a>
           </div>
           <p className="mt-6 md:mt-8 font-display text-lg md:text-xl leading-tight text-muted-foreground md:hidden">
             TRANA is your legal guide — <em>not your lawyer.</em><br />We exist to make sure you always reach one.
