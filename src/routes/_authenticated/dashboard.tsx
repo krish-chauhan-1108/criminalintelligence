@@ -52,7 +52,7 @@ function DashboardLayout() {
   const sidebar = (
     <div className="flex h-full flex-col">
       <Link to="/" className="font-display text-3xl font-semibold tracking-[0.25em] text-foreground">TRANA</Link>
-      <p className="mt-1 text-xs text-muted-foreground">त्राण — Protection. Delivered.</p>
+      <p className="mt-1 text-xs text-muted-foreground">त्राणा — Protection. Delivered.</p>
       <nav className="mt-12 flex flex-col gap-1">
         {nav.map((n) => (
           <Link

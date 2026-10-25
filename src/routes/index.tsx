@@ -47,7 +47,7 @@ function Index() {
 
       {/* Hero */}
       <section id="top" className="mx-auto flex min-h-[88vh] max-w-7xl flex-col justify-center px-6 py-24">
-        <p className="reveal mb-8 font-display text-xl italic text-muted-foreground">त्राण — Protection. Delivered.</p>
+        <p className="reveal mb-8 font-display text-xl italic text-muted-foreground">त्राणा — Protection. Delivered.</p>
         <h1 className="reveal font-display text-6xl leading-[0.95] font-medium md:text-8xl lg:text-[8.5rem]">
           Legal Guidance,<br /><em className="font-normal">Within Reach.</em>
         </h1>
@@ -193,7 +193,7 @@ function Index() {
           <div className="flex flex-col justify-between gap-8 md:flex-row">
             <div>
               <p className="font-display text-3xl font-semibold tracking-[0.25em]">TRANA</p>
-              <p className="mt-2 font-display italic text-muted-foreground">त्राण — Protection. Delivered.</p>
+              <p className="mt-2 font-display italic text-muted-foreground">त्राणा — Protection. Delivered.</p>
             </div>
             <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
               {["About", "For Lawyers", "Legal Research", "Privacy Policy", "Contact"].map((l) => (
