@@ -46,7 +46,7 @@ function Index() {
         </div>
       </nav>
 
-      {/* Chat Section */}
+
 
   <div className="mx-auto max-w-3xl px-6 text-center">
     <h2 className="text-white text-3xl mb-4" style={{fontFamily: "'Cormorant Garamond', serif"}}>Chat with TRANA</h2>
