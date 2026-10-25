@@ -89,8 +89,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" },
-      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
-      
+      { rel: "icon", href: "/TRANA_legal-tech_logo.png", type: "image/png" },
+      { rel: "shortcut icon", href: "/TRANA_legal-tech_logo.png" },
+      { rel: "apple-touch-icon", href: "/TRANA_legal-tech_logo.png" },
     ],
   }),
   shellComponent: RootShell,
