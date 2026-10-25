@@ -47,7 +47,7 @@ function Index() {
       </nav>
 
       {/* Chat Section */}
-<section id="chat" className="bg-[#0A0A0A] py-12">
+
   <div className="mx-auto max-w-3xl px-6 text-center">
     <h2 className="text-white text-3xl mb-4" style={{fontFamily: "'Cormorant Garamond', serif"}}>Chat with TRANA</h2>
     <p className="text-gray-400 mb-8">Ask any question about your criminal law situation in India — in Hindi or English</p>
