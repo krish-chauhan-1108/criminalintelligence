@@ -182,7 +182,7 @@ function Index() {
       </section>
 
       {/* CTA */}
-      <section id="cta" className="border-b border-border py-32 text-center">
+      <section id="cta" className="border-b border-border py-32 text-center bg-white text-black md:bg-transparent md:text-foreground">
         <div className="reveal mx-auto max-w-3xl px-6">
           <h2 className="font-display text-6xl font-medium md:text-8xl">Don't face it alone.</h2>
           <p className="mt-6 text-lg font-light text-muted-foreground">Get legal guidance or connect with a lawyer today.</p>
