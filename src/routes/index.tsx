@@ -63,20 +63,20 @@ function Index() {
       </section>
 
       {/* Who */}
-      <section id="who" className="border-t border-border bg-secondary py-10 md:py-28">
+      <section id="who" className="bg-paper py-10 md:py-28 text-ink">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
-          <div className="reveal"><Eyebrow>01 — Who we help</Eyebrow><H2>Built for Everyone<br />Who Needs the Law</H2></div>
-          <div className="mt-8 md:mt-16 grid grid-cols-1 gap-px bg-border md:grid-cols-3">
+          <div className="reveal"><Eyebrow light>01 — Who we help</Eyebrow><H2 light>Built for Everyone<br />Who Needs the Law</H2></div>
+          <div className="mt-8 md:mt-16 grid grid-cols-1 gap-px bg-paper-border md:grid-cols-3">
             {[
               ["🧑‍💼", "Citizens", "Facing a Legal Problem?", "Understand your rights, decode legal documents, and get connected to a qualified lawyer — quickly and clearly."],
               ["⚖️", "Lawyers", "For Legal Professionals", "Research cases, find citations from High Courts and lower courts, draft documents, and connect with other lawyers in our professional network."],
               ["📚", "Students", "For Law Students", "Access legal research with case citations, judgment timelines, and practical legal tools to support your studies."],
             ].map(([i, k, t, b]) => (
-              <div key={t} className="reveal bg-secondary p-5 md:p-10">
+              <div key={t} className="reveal bg-paper p-5 md:p-10">
                 <div className="text-2xl grayscale">{i}</div>
-                <p className="mt-4 md:mt-8 text-xs uppercase tracking-[0.25em] text-muted-foreground">{k}</p>
-                <h3 className="mt-2 md:mt-3 font-display text-2xl md:text-3xl">{t}</h3>
-                <p className="mt-3 md:mt-4 font-light leading-relaxed text-muted-foreground">{b}</p>
+                <p className="mt-4 md:mt-8 text-xs uppercase tracking-[0.25em] text-ink-muted">{k}</p>
+                <h3 className="mt-2 md:mt-3 font-display text-2xl md:text-3xl font-medium">{t}</h3>
+                <p className="mt-3 md:mt-4 font-light leading-relaxed text-ink-muted">{b}</p>
               </div>
             ))}
           </div>
@@ -105,54 +105,54 @@ function Index() {
       </section>
 
       {/* AI tools */}
-      <section className="py-10 md:py-28">
+      <section className="bg-paper py-10 md:py-28 text-ink">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
-          <div className="reveal max-w-2xl"><Eyebrow>03 — AI tools</Eyebrow><H2>AI-Assisted Legal Tools</H2>
-            <p className="mt-4 md:mt-6 text-base md:text-lg font-light text-muted-foreground">Powerful features being built to make legal help faster and smarter.</p></div>
+          <div className="reveal max-w-2xl"><Eyebrow light>03 — AI tools</Eyebrow><H2 light>AI-Assisted Legal Tools</H2>
+            <p className="mt-4 md:mt-6 text-base md:text-lg font-light text-ink-muted">Powerful features being built to make legal help faster and smarter.</p></div>
           <div className="mt-8 md:mt-16 grid gap-4 md:gap-6 md:grid-cols-2">
             {[
               ["In Development", "FIR Analyser", "Describe or upload an FIR. Our AI will identify the sections invoked, explain what they mean, check bail eligibility, and suggest next steps — in plain language."],
               ["Planned", "Legal Information Assistant", "A chat assistant that answers your legal questions using verified Indian law — and always guides you toward a qualified lawyer when needed."],
             ].map(([badge, t, b]) => (
-              <div key={t} className="reveal border border-border bg-card p-5 md:p-10">
-                <span className="inline-block border border-primary px-3 py-1 text-[0.65rem] uppercase tracking-[0.25em]">{badge}</span>
+              <div key={t} className="reveal border border-paper-border bg-paper p-5 md:p-10">
+                <span className="inline-block border border-ink px-3 py-1 text-[0.65rem] uppercase tracking-[0.25em] text-ink">{badge}</span>
                 <h3 className="mt-5 md:mt-8 font-display text-3xl md:text-4xl">{t}</h3>
-                <p className="mt-3 md:mt-4 font-light leading-relaxed text-muted-foreground">{b}</p>
+                <p className="mt-3 md:mt-4 font-light leading-relaxed text-ink-muted">{b}</p>
               </div>
             ))}
           </div>
-          <p className="reveal mt-6 md:mt-10 font-display text-lg md:text-xl italic text-muted-foreground">
+          <p className="reveal mt-6 md:mt-10 font-display text-lg md:text-xl italic text-ink-muted">
             These are AI tools for information only. For legal advice, TRANA will always connect you to a real lawyer.
           </p>
         </div>
       </section>
 
       {/* Lawyers */}
-      <section id="lawyers" className="bg-paper py-10 md:py-28 text-ink">
+      <section id="lawyers" className="py-10 md:py-28">
         <div className="mx-auto grid max-w-7xl gap-8 md:gap-16 px-4 md:px-6 md:grid-cols-2">
           <div className="reveal">
-            <Eyebrow light>04 — For lawyers</Eyebrow>
-            <H2 light>A Platform Built for Legal Professionals Too</H2>
-            <p className="mt-5 md:mt-8 text-base md:text-lg font-light leading-relaxed text-ink-muted">
+            <Eyebrow>04 — For lawyers</Eyebrow>
+            <H2>A Platform Built for Legal Professionals Too</H2>
+            <p className="mt-5 md:mt-8 text-base md:text-lg font-light leading-relaxed text-muted-foreground">
               TRANA isn't just for people seeking help. It's a platform where lawyers and legal professionals can connect with clients, collaborate with peers, and access tools that make their practice more efficient.
             </p>
           </div>
           <div className="reveal flex flex-col justify-end">
             {["Receive client referrals directly through the platform", "Access legal research with case citations and timelines", "Connect with other lawyers in our professional network"].map((x) => (
-              <div key={x} className="flex gap-4 md:gap-5 border-t border-paper-border py-3">
-                <span className="font-display text-xl md:text-2xl">✓</span>
-                <p className="text-base md:text-lg">{x}</p>
+              <div key={x} className="flex gap-4 md:gap-5 border-t border-border py-3">
+                <span className="font-display text-xl md:text-2xl text-foreground">✓</span>
+                <p className="text-base md:text-lg text-foreground">{x}</p>
               </div>
             ))}
-            <Link to="/lawyer" className="btn-ink mt-6 md:mt-8 self-start">Access Lawyer Workspace</Link>
+            <Link to="/lawyer" className="btn-solid mt-6 md:mt-8 self-start">Access Lawyer Workspace</Link>
           </div>
         </div>
       </section>
 
       {/* How */}
-      <section id="how" className="py-10 md:py-28">
+      <section id="how" className="bg-paper py-10 md:py-28 text-ink">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
-          <div className="reveal"><Eyebrow>05 — Process</Eyebrow><H2>How TRANA Works</H2></div>
+          <div className="reveal"><Eyebrow light>05 — Process</Eyebrow><H2 light>How TRANA Works</H2></div>
           <div className="mt-8 md:mt-16 grid gap-6 md:gap-10 grid-cols-2 md:grid-cols-4">
             {[
               ["Describe Your Situation", "Tell us what's happened in plain language — no legal knowledge needed."],
@@ -160,10 +160,10 @@ function Index() {
               ["Connect With a Lawyer", "We connect you to a verified lawyer for a consultation by call or chat."],
               ["You're Guided, Not Alone", "TRANA stays with you — answering questions and helping you understand every step."],
             ].map(([t, b], n) => (
-              <div key={t} className="reveal border-t border-primary pt-4 md:pt-6">
-                <span className="text-xs tracking-[0.25em] text-muted-foreground">STEP 0{n + 1}</span>
-                <h3 className="mt-3 md:mt-4 font-display text-xl md:text-2xl">{t}</h3>
-                <p className="mt-2 md:mt-3 text-sm font-light leading-relaxed text-muted-foreground">{b}</p>
+              <div key={t} className="reveal border-t border-ink pt-4 md:pt-6">
+                <span className="text-xs tracking-[0.25em] text-ink-muted">STEP 0{n + 1}</span>
+                <h3 className="mt-3 md:mt-4 font-display text-xl md:text-2xl text-ink">{t}</h3>
+                <p className="mt-2 md:mt-3 text-sm font-light leading-relaxed text-ink-muted">{b}</p>
               </div>
             ))}
           </div>
@@ -171,14 +171,14 @@ function Index() {
       </section>
 
       {/* Statement */}
-      <section className="bg-primary py-20 md:py-32 text-primary-foreground hidden md:block">
+      <section className="border-t border-border bg-background py-20 md:py-32 text-foreground hidden md:block">
         <p className="reveal mx-auto max-w-5xl px-6 text-center font-display text-4xl leading-tight md:text-6xl">
           TRANA is your legal guide — <em>not your lawyer.</em><br />We exist to make sure you always reach one.
         </p>
       </section>
 
       {/* CTA */}
-      <section id="cta" className="border-b border-border py-12 md:py-32 text-center bg-white text-black md:bg-transparent md:text-foreground">
+      <section id="cta" className="border-b border-border py-12 md:py-32 text-center bg-background text-foreground">
         <div className="reveal mx-auto max-w-3xl px-4 md:px-6">
           <h2 className="font-display text-4xl md:text-6xl lg:text-8xl font-medium">Don't face it alone.</h2>
           <p className="mt-4 md:mt-6 text-base md:text-lg font-light text-muted-foreground">Get legal guidance or connect with a lawyer today.</p>
