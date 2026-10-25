@@ -198,7 +198,7 @@ function Index() {
       <button onClick={() => setModalOpen(false)} className="absolute top-2 right-2 text-white text-xl font-bold">✕</button>
       <h2 className="text-white text-xl mb-4">We're Launching Soon</h2>
       <p className="text-gray-400 mb-4">TRANA is almost ready. Leave your email and we will notify you the moment we go live.</p>
-      <p className="text-gray-400 mb-4">Our team of verfied lawyers are coming soon</p>
+      <p className="text-gray-400 mb-4">Our team of verfied lawyers are coming soon.</p>
       <input type="email" placeholder="Your email" className="w-full p-2 mb-4 bg-white text-black border border-black" />
       <button className="w-full bg-white text-black py-2">Notify Me</button>
     </div>
