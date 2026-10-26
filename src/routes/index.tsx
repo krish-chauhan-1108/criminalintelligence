@@ -84,23 +84,21 @@ function Index() {
       </section>
 
       {/* Stats Bar */}
-      <section className="bg-paper border-t border-paper-border py-4 md:py-5 text-ink">
-        <div className="mx-auto max-w-7xl px-4 md:px-6 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
-          <div className="flex-1 flex flex-col items-center text-center px-4 md:px-6">
-            <span className="font-sans text-sm font-semibold tracking-wide text-ink">BNS · BNSS · BSA</span>
-            <span className="font-sans text-xs font-light text-ink-muted mt-0.5">All 3 New Laws Covered</span>
+      <section className="bg-paper border-t border-paper-border py-3 md:py-5 text-ink">
+        <div className="mx-auto max-w-7xl px-3 md:px-6 flex flex-row items-center justify-between">
+          <div className="flex-1 min-w-0 flex flex-col items-center text-center px-1.5 sm:px-3 md:px-6">
+            <span className="font-sans text-[11px] sm:text-xs md:text-sm font-semibold tracking-tight sm:tracking-wide text-ink leading-tight">BNS · BNSS · BSA</span>
+            <span className="font-sans text-[9px] sm:text-[11px] md:text-xs font-light text-ink-muted mt-0.5 leading-tight">All 3 New Laws Covered</span>
           </div>
-          <div className="hidden md:block w-px h-7 bg-ink/20 self-center" />
-          <div className="w-16 h-px bg-ink/15 md:hidden" />
-          <div className="flex-1 flex flex-col items-center text-center px-4 md:px-6">
-            <span className="font-sans text-sm font-semibold tracking-wide text-ink">Hindi & English</span>
-            <span className="font-sans text-xs font-light text-ink-muted mt-0.5">Bilingual Support</span>
+          <div className="w-px h-6 md:h-7 bg-ink/20 shrink-0 self-center" />
+          <div className="flex-1 min-w-0 flex flex-col items-center text-center px-1.5 sm:px-3 md:px-6">
+            <span className="font-sans text-[11px] sm:text-xs md:text-sm font-semibold tracking-tight sm:tracking-wide text-ink leading-tight">Hindi & English</span>
+            <span className="font-sans text-[9px] sm:text-[11px] md:text-xs font-light text-ink-muted mt-0.5 leading-tight">Bilingual Support</span>
           </div>
-          <div className="hidden md:block w-px h-7 bg-ink/20 self-center" />
-          <div className="w-16 h-px bg-ink/15 md:hidden" />
-          <div className="flex-1 flex flex-col items-center text-center px-4 md:px-6">
-            <span className="font-sans text-sm font-semibold tracking-wide text-ink">Free to Start</span>
-            <span className="font-sans text-xs font-light text-ink-muted mt-0.5">No Lawyer Fees to Understand Your Rights</span>
+          <div className="w-px h-6 md:h-7 bg-ink/20 shrink-0 self-center" />
+          <div className="flex-1 min-w-0 flex flex-col items-center text-center px-1.5 sm:px-3 md:px-6">
+            <span className="font-sans text-[11px] sm:text-xs md:text-sm font-semibold tracking-tight sm:tracking-wide text-ink leading-tight">Free to Start</span>
+            <span className="font-sans text-[9px] sm:text-[11px] md:text-xs font-light text-ink-muted mt-0.5 leading-tight">No Lawyer Fees to Understand Your Rights</span>
           </div>
         </div>
       </section>
