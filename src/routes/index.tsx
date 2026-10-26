@@ -83,6 +83,28 @@ function Index() {
         </div>
       </section>
 
+      {/* Stats Bar */}
+      <section className="bg-paper border-t border-paper-border py-4 md:py-5 text-ink">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 flex flex-col md:flex-row items-center justify-between gap-4 md:gap-0">
+          <div className="flex-1 flex flex-col items-center text-center px-4 md:px-6">
+            <span className="font-sans text-sm font-semibold tracking-wide text-ink">BNS · BNSS · BSA</span>
+            <span className="font-sans text-xs font-light text-ink-muted mt-0.5">All 3 New Laws Covered</span>
+          </div>
+          <div className="hidden md:block w-px h-7 bg-ink/20 self-center" />
+          <div className="w-16 h-px bg-ink/15 md:hidden" />
+          <div className="flex-1 flex flex-col items-center text-center px-4 md:px-6">
+            <span className="font-sans text-sm font-semibold tracking-wide text-ink">Hindi & English</span>
+            <span className="font-sans text-xs font-light text-ink-muted mt-0.5">Bilingual Support</span>
+          </div>
+          <div className="hidden md:block w-px h-7 bg-ink/20 self-center" />
+          <div className="w-16 h-px bg-ink/15 md:hidden" />
+          <div className="flex-1 flex flex-col items-center text-center px-4 md:px-6">
+            <span className="font-sans text-sm font-semibold tracking-wide text-ink">Free to Start</span>
+            <span className="font-sans text-xs font-light text-ink-muted mt-0.5">No Lawyer Fees to Understand Your Rights</span>
+          </div>
+        </div>
+      </section>
+
       {/* Features */}
       <section id="features" className="py-10 md:py-28">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
