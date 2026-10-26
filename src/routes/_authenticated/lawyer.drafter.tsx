@@ -10,7 +10,7 @@ import { useLawyerAuth } from "./lawyer";
 export const Route = createFileRoute("/_authenticated/lawyer/drafter")({
   head: () => ({
     meta: [
-      { title: "AI Drafter — TRANA Lawyer Workspace" },
+      { title: "AI Drafter TRANA Lawyer Workspace" },
       { name: "description", content: "Generate bail applications, petitions, legal notices and court pleadings using TRANA AI." },
     ],
   }),
@@ -29,16 +29,16 @@ const docTypes = [
 type DocType = (typeof docTypes)[number];
 
 const bnsSections = [
-  { value: "482 BNSS", label: "Section 482 BNSS — Anticipatory Bail (Apprehension of Arrest)" },
-  { value: "480 BNSS", label: "Section 480 BNSS — Regular Bail (Non-Bailable Offence)" },
-  { value: "173 BNSS", label: "Section 173 BNSS — Information of Cognizable Offence (FIR)" },
-  { value: "316 BNS", label: "Section 316 BNS — Criminal Breach of Trust" },
-  { value: "318 BNS", label: "Section 318 BNS — Cheating and Dishonestly Inducing Delivery" },
-  { value: "115 BNS", label: "Section 115 BNS — Voluntarily Causing Hurt" },
-  { value: "351 BNS", label: "Section 351 BNS — Criminal Intimidation" },
-  { value: "138 NI Act", label: "Section 138 Negotiable Instruments Act — Dishonour of Cheque" },
-  { value: "Art 226", label: "Article 226 of the Constitution — Writ Petition before High Court" },
-  { value: "Sec 9 CPC", label: "Section 9 CPC / Specific Relief — Civil Suit for Injunction" },
+  { value: "482 BNSS", label: "Section 482 BNSS Anticipatory Bail (Apprehension of Arrest)" },
+  { value: "480 BNSS", label: "Section 480 BNSS Regular Bail (Non-Bailable Offence)" },
+  { value: "173 BNSS", label: "Section 173 BNSS Information of Cognizable Offence (FIR)" },
+  { value: "316 BNS", label: "Section 316 BNS Criminal Breach of Trust" },
+  { value: "318 BNS", label: "Section 318 BNS Cheating and Dishonestly Inducing Delivery" },
+  { value: "115 BNS", label: "Section 115 BNS Voluntarily Causing Hurt" },
+  { value: "351 BNS", label: "Section 351 BNS Criminal Intimidation" },
+  { value: "138 NI Act", label: "Section 138 Negotiable Instruments Act Dishonour of Cheque" },
+  { value: "Art 226", label: "Article 226 of the Constitution Writ Petition before High Court" },
+  { value: "Sec 9 CPC", label: "Section 9 CPC / Specific Relief Civil Suit for Injunction" },
 ];
 
 function generateLegalDraft(docType: DocType, facts: string, section: string, advocateName: string, courts: string) {
@@ -322,7 +322,7 @@ function LawyerDrafter() {
             AI-Assisted Drafting
           </span>
           <span className="border border-amber-500/40 bg-amber-500/10 px-3 py-1 text-xs uppercase tracking-[0.15em] text-amber-400">
-            In Development — Preview Mode
+            In Development Preview Mode
           </span>
         </div>
 

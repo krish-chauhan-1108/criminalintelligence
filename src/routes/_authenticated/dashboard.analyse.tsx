@@ -8,9 +8,9 @@ import { analyseSituation, type Analysis } from "@/lib/analyse.functions";
 export const Route = createFileRoute("/_authenticated/dashboard/analyse")({
   head: () => ({
     meta: [
-      { title: "Legal First Aid — TRANA" },
+      { title: "Legal First Aid TRANA" },
       { name: "description", content: "Describe what happened or upload a document and understand your rights and next steps." },
-      { property: "og:title", content: "Legal First Aid — TRANA" },
+      { property: "og:title", content: "Legal First Aid TRANA" },
       { property: "og:description", content: "Understand your legal situation in plain language." },
     ],
   }),
@@ -63,9 +63,9 @@ function Analyse() {
     <div>
       <div className="bg-paper p-8 text-ink md:p-10">
         <span className="inline-block border border-ink px-3 py-1 text-[0.65rem] uppercase tracking-[0.2em]">AI-Assisted · In Development</span>
-        <h1 className="mt-5 font-display text-4xl leading-tight md:text-5xl">Legal First Aid — Understand Your Situation</h1>
+        <h1 className="mt-5 font-display text-4xl leading-tight md:text-5xl">Legal First Aid Understand Your Situation</h1>
         <p className="mt-4 max-w-2xl text-sm text-ink-muted">
-          Describe what happened or upload a document. TRANA will help you understand it — and connect you to a lawyer if needed.
+          Describe what happened or upload a document. TRANA will help you understand it and connect you to a lawyer if needed.
         </p>
       </div>
 
@@ -93,7 +93,7 @@ function Analyse() {
               <button aria-label="Remove file" onClick={(e) => { e.stopPropagation(); setFile(null); }}><X className="h-4 w-4" /></button>
             </span>
           ) : (
-            <span className="mt-3 text-muted-foreground">Drag and drop, or click to choose — PDF or photo, up to 5 MB</span>
+            <span className="mt-3 text-muted-foreground">Drag and drop, or click to choose PDF or photo, up to 5 MB</span>
           )}
           <input ref={inputRef} type="file" accept="application/pdf,image/*" className="hidden" onChange={(e) => pick(e.target.files?.[0])} />
         </div>
@@ -112,7 +112,7 @@ function Analyse() {
               <div className="mt-4 border-t border-border pt-4">
                 <p className="mb-3 text-xs uppercase tracking-[0.2em] text-muted-foreground">Sections identified</p>
                 <ul className="space-y-2">
-                  {result.sections.map((s, i) => <li key={i}><span className="font-medium">{s.code}</span> — {s.explanation}</li>)}
+                  {result.sections.map((s, i) => <li key={i}><span className="font-medium">{s.code}</span> {s.explanation}</li>)}
                 </ul>
               </div>
             )}
@@ -132,7 +132,7 @@ function Analyse() {
           </Card>
           <div className="bg-primary p-8 text-primary-foreground md:p-10">
             <h3 className="font-display text-3xl">Speak to a Lawyer About This</h3>
-            <p className="mt-3 max-w-2xl text-sm opacity-80">TRANA has given you information — but a qualified lawyer can give you advice specific to your case.</p>
+            <p className="mt-3 max-w-2xl text-sm opacity-80">TRANA has given you information but a qualified lawyer can give you advice specific to your case.</p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link to="/dashboard/lawyers" className="btn-ink">Find a Lawyer Now</Link>
               <Link to="/dashboard/lawyers" className="inline-flex items-center border border-primary-foreground px-7 py-3.5 text-[0.8rem] font-medium uppercase tracking-[0.14em] hover:bg-primary-foreground hover:text-primary">Schedule a Consultation</Link>

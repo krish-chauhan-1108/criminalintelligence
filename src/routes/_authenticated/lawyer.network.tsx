@@ -12,8 +12,8 @@ import { useLawyerAuth } from "./lawyer";
 export const Route = createFileRoute("/_authenticated/lawyer/network")({
   head: () => ({
     meta: [
-      { title: "Professional Network — TRANA Lawyer Workspace" },
-      { name: "description", content: "TRANA's network of verified lawyers — collaborate, refer cases and connect with peers." },
+      { title: "Professional Network TRANA Lawyer Workspace" },
+      { name: "description", content: "TRANA's network of verified lawyers collaborate, refer cases and connect with peers." },
     ],
   }),
   component: LawyerNetwork,
@@ -189,7 +189,7 @@ function LawyerNetwork() {
           Connect With Legal Professionals
         </h1>
         <p className="mt-2 text-sm text-[#999999] max-w-2xl leading-relaxed">
-          TRANA's network of verified lawyers — collaborate, refer cases and connect with peers.
+          TRANA's network of verified lawyers collaborate, refer cases and connect with peers.
         </p>
       </div>
 

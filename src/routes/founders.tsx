@@ -8,7 +8,7 @@ import { Toaster } from "@/components/ui/sonner";
 export const Route = createFileRoute("/founders")({
   head: () => ({
     meta: [
-      { title: "Founders — TRANA" },
+      { title: "Founders TRANA" },
       { name: "description", content: "Executive operations, metrics and platform management for TRANA founding team." },
     ],
   }),

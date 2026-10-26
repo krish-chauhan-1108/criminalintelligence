@@ -8,7 +8,7 @@ import { toast } from "sonner";
 export const Route = createFileRoute("/founders/analyses")({
   head: () => ({
     meta: [
-      { title: "FIR Analyses Logs — TRANA Founders" },
+      { title: "FIR Analyses Logs TRANA Founders" },
       { name: "description", content: "Complete audit log of all FIR analyses, statutory extractions, and AI latency." },
     ],
   }),
@@ -304,7 +304,7 @@ function FoundersAnalysesPage() {
                   {a.lawyerReferred ? (
                     <span className="text-emerald-400">✓ Yes</span>
                   ) : (
-                    <span className="text-[#666666]">— No</span>
+                    <span className="text-[#666666]">No</span>
                   )}
                 </td>
                 <td className="py-2.5 px-3 text-right font-mono text-[#888888]">

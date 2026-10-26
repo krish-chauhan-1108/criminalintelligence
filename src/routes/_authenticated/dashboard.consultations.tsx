@@ -5,9 +5,9 @@ import { supabase } from "@/integrations/supabase/client";
 export const Route = createFileRoute("/_authenticated/dashboard/consultations")({
   head: () => ({
     meta: [
-      { title: "My Consultations — TRANA" },
+      { title: "My Consultations TRANA" },
       { name: "description", content: "Your past and upcoming consultations with TRANA lawyers." },
-      { property: "og:title", content: "My Consultations — TRANA" },
+      { property: "og:title", content: "My Consultations TRANA" },
       { property: "og:description", content: "Track your consultations." },
     ],
   }),
@@ -52,7 +52,7 @@ function Consultations() {
                   <td className="px-5 py-4">
                     {(c.status === "requested" || c.status === "upcoming") ? (
                       <button onClick={() => cancel(c.id)} className="text-xs uppercase tracking-[0.15em] text-muted-foreground hover:text-foreground">Cancel</button>
-                    ) : "—"}
+                    ) : ""}
                   </td>
                 </tr>
               ))}

@@ -11,7 +11,7 @@ import { useLawyerAuth } from "./lawyer";
 export const Route = createFileRoute("/_authenticated/lawyer/profile")({
   head: () => ({
     meta: [
-      { title: "My Profile — TRANA Lawyer Workspace" },
+      { title: "My Profile TRANA Lawyer Workspace" },
       { name: "description", content: "Manage your legal profile, Bar registration, specialisations, and consultation preferences." },
     ],
   }),
@@ -174,7 +174,7 @@ function LawyerProfilePage() {
         {/* SECTION 1: PHOTO & BASIC INFO */}
         <div className="bg-[#1A1A1A] border border-[#2E2E2E] p-6 md:p-8 space-y-6">
           <h2 className="text-xs uppercase tracking-[0.2em] text-[#888888] border-b border-[#282828] pb-3">
-            01 — Professional Identity
+            01 Professional Identity
           </h2>
 
           <div className="flex flex-col sm:flex-row items-start gap-6">
@@ -246,7 +246,7 @@ function LawyerProfilePage() {
         <div className="bg-[#1A1A1A] border border-[#2E2E2E] p-6 md:p-8 space-y-4">
           <div className="flex items-center justify-between border-b border-[#282828] pb-3">
             <h2 className="text-xs uppercase tracking-[0.2em] text-[#888888]">
-              02 — Specialisation Areas (Multi-Select)
+              02 Specialisation Areas (Multi-Select)
             </h2>
             <span className="text-xs text-[#777777]">
               {selectedSpecialisations.length} Selected
@@ -282,7 +282,7 @@ function LawyerProfilePage() {
         {/* SECTION 3: CITY & COURTS */}
         <div className="bg-[#1A1A1A] border border-[#2E2E2E] p-6 md:p-8 space-y-4">
           <h2 className="text-xs uppercase tracking-[0.2em] text-[#888888] border-b border-[#282828] pb-3">
-            03 — Jurisdiction & Courts of Practice
+            03 Jurisdiction & Courts of Practice
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -319,7 +319,7 @@ function LawyerProfilePage() {
         {/* SECTION 4: CONSULTATION TYPES OFFERED */}
         <div className="bg-[#1A1A1A] border border-[#2E2E2E] p-6 md:p-8 space-y-4">
           <h2 className="text-xs uppercase tracking-[0.2em] text-[#888888] border-b border-[#282828] pb-3">
-            04 — Consultation Types Offered
+            04 Consultation Types Offered
           </h2>
 
           <p className="text-xs text-[#999999]">
@@ -393,7 +393,7 @@ function LawyerProfilePage() {
         <div className="bg-[#1A1A1A] border border-[#2E2E2E] p-6 md:p-8 space-y-4">
           <div className="flex items-center justify-between border-b border-[#282828] pb-3">
             <h2 className="text-xs uppercase tracking-[0.2em] text-[#888888]">
-              05 — Short Bio (Shown to Clients)
+              05 Short Bio (Shown to Clients)
             </h2>
             <span className="text-xs text-[#777777] font-mono">
               {bio.length} characters

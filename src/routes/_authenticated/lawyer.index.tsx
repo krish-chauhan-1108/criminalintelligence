@@ -11,7 +11,7 @@ import { useLawyerAuth } from "./lawyer";
 export const Route = createFileRoute("/_authenticated/lawyer/")({
   head: () => ({
     meta: [
-      { title: "Lawyer Overview — TRANA" },
+      { title: "Lawyer Overview TRANA" },
       { name: "description", content: "Overview of your legal practice, referrals, and active matters on TRANA." },
     ],
   }),
@@ -285,7 +285,7 @@ function LawyerOverview() {
                 Connect With Lawyers
               </h3>
               <p className="mt-3 text-sm text-[#999999] leading-relaxed font-light">
-                TRANA's professional network — collaborate, refer and connect with other legal professionals.
+                TRANA's professional network collaborate, refer and connect with other legal professionals.
               </p>
             </div>
             <div className="mt-8 pt-6 border-t border-[#2A2A2A]">

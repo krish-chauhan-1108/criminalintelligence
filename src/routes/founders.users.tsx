@@ -8,7 +8,7 @@ import { toast } from "sonner";
 export const Route = createFileRoute("/founders/users")({
   head: () => ({
     meta: [
-      { title: "Users Directory — TRANA Founders" },
+      { title: "Users Directory TRANA Founders" },
       { name: "description", content: "Comprehensive user registry, citizen queries, and engagement telemetry." },
     ],
   }),

@@ -7,9 +7,9 @@ import { supabase } from "@/integrations/supabase/client";
 export const Route = createFileRoute("/_authenticated/dashboard/lawyers")({
   head: () => ({
     meta: [
-      { title: "Find a Lawyer — TRANA" },
+      { title: "Find a Lawyer TRANA" },
       { name: "description", content: "Connect with verified lawyers and arrange a consultation by call or chat." },
-      { property: "og:title", content: "Find a Lawyer — TRANA" },
+      { property: "og:title", content: "Find a Lawyer TRANA" },
       { property: "og:description", content: "Verified legal professionals across India." },
     ],
   }),
@@ -67,7 +67,7 @@ function Lawyers() {
       {isLoading ? null : lawyers.length === 0 ? (
         <div className="mt-10 border border-border bg-card p-8">
           <p className="font-display text-2xl">No lawyers listed yet</p>
-          <p className="mt-2 text-sm text-muted-foreground">We're verifying our first legal professionals. Check back soon — in an emergency, contact your nearest legal aid authority (NALSA helpline 15100).</p>
+          <p className="mt-2 text-sm text-muted-foreground">We're verifying our first legal professionals. Check back soon in an emergency, contact your nearest legal aid authority (NALSA helpline 15100).</p>
         </div>
       ) : list.length === 0 ? (
         <p className="mt-10 text-sm text-muted-foreground">No lawyers match these filters.</p>

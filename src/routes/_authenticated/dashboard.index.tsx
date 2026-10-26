@@ -40,7 +40,7 @@ function Home() {
         {greeting()}, {profile?.name}.<br />How can TRANA help you today?
       </h1>
       <p className="mt-4 max-w-2xl text-sm text-muted-foreground">
-        Remember — TRANA provides legal information and first aid. For legal advice, always speak to a qualified lawyer.
+        Remember TRANA provides legal information and first aid. For legal advice, always speak to a qualified lawyer.
       </p>
 
       <div className="mt-12 grid gap-5 lg:grid-cols-3">

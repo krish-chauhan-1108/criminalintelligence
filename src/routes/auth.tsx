@@ -12,9 +12,9 @@ export const Route = createFileRoute("/auth")({
   },
   head: () => ({
     meta: [
-      { title: "Sign in — TRANA" },
+      { title: "Sign in TRANA" },
       { name: "description", content: "Sign in or create your TRANA account to understand your legal situation and reach a lawyer." },
-      { property: "og:title", content: "Sign in — TRANA" },
+      { property: "og:title", content: "Sign in TRANA" },
       { property: "og:description", content: "Access your TRANA legal first-aid dashboard." },
     ],
   }),
@@ -92,7 +92,7 @@ function AuthPage() {
         <button onClick={() => setMode(mode === "in" ? "up" : "in")} className="mt-6 text-sm text-muted-foreground hover:text-foreground">
           {mode === "in" ? "New to TRANA? Create an account" : "Already have an account? Sign in"}
         </button>
-        <p className="mt-10 text-xs leading-relaxed text-muted-foreground">TRANA provides legal information and first aid — not legal advice. Always consult a qualified lawyer.</p>
+        <p className="mt-10 text-xs leading-relaxed text-muted-foreground">TRANA provides legal information and first aid not legal advice. Always consult a qualified lawyer.</p>
       </div>
     </div>
   );

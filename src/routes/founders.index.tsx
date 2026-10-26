@@ -7,7 +7,7 @@ import { supabase } from "@/integrations/supabase/client";
 export const Route = createFileRoute("/founders/")({
   head: () => ({
     meta: [
-      { title: "Founders Overview — TRANA" },
+      { title: "Founders Overview TRANA" },
       { name: "description", content: "Executive operational overview and key platform metrics for TRANA." },
     ],
   }),

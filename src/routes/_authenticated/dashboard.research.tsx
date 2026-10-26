@@ -5,10 +5,10 @@ import { supabase } from "@/integrations/supabase/client";
 export const Route = createFileRoute("/_authenticated/dashboard/research")({
   head: () => ({
     meta: [
-      { title: "Legal Research — TRANA" },
+      { title: "Legal Research TRANA" },
       { name: "description", content: "Search case law, statutes and legal information with citations and timelines." },
-      { property: "og:title", content: "Legal Research — TRANA" },
-      { property: "og:description", content: "Case law research with citations — coming soon." },
+      { property: "og:title", content: "Legal Research TRANA" },
+      { property: "og:description", content: "Case law research with citations coming soon." },
     ],
   }),
   component: Research,
@@ -49,13 +49,13 @@ function Research() {
         {saved && <p className="mt-3 text-xs text-muted-foreground">Search saved. Results will be available when research launches.</p>}
       </form>
 
-      <span className="mt-10 inline-block border border-foreground px-3 py-1 text-[0.65rem] uppercase tracking-[0.2em]">Planned Feature — Coming Soon</span>
+      <span className="mt-10 inline-block border border-foreground px-3 py-1 text-[0.65rem] uppercase tracking-[0.2em]">Planned Feature Coming Soon</span>
 
       <div className="pointer-events-none mt-5 select-none border border-border bg-card p-7 opacity-40" aria-hidden>
         <p className="font-display text-2xl">Example Case Name v. State</p>
         <p className="mt-1 text-xs uppercase tracking-[0.2em] text-muted-foreground">Supreme Court of India · Year</p>
         <p className="mt-4 text-sm text-muted-foreground">A short summary of the judgment and why it matters will appear here.</p>
-        <p className="mt-3 text-xs text-muted-foreground">Sections cited: —</p>
+        <p className="mt-3 text-xs text-muted-foreground">Sections cited:</p>
         <button disabled className="btn-line mt-5">View Full Judgment</button>
       </div>
 

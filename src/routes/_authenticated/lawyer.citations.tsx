@@ -6,7 +6,7 @@ import { toast } from "sonner";
 export const Route = createFileRoute("/_authenticated/lawyer/citations")({
   head: () => ({
     meta: [
-      { title: "Citation Finder — TRANA Lawyer Workspace" },
+      { title: "Citation Finder TRANA Lawyer Workspace" },
       { name: "description", content: "Search BNS, BNSS, BSA and case law with exact citations and section references." },
     ],
   }),
@@ -241,7 +241,7 @@ function LawyerCitations() {
   }, [searchTerm, activeFilter]);
 
   function handleCopyCitation(item: CitationItem) {
-    const formatted = `${item.section} — ${item.title}\nCross-reference: ${item.crossReference}\n\nLeading Precedents:\n` +
+    const formatted = `${item.section} ${item.title}\nCross-reference: ${item.crossReference}\n\nLeading Precedents:\n` +
       item.keyJudgments.map((j) => `• ${j.caseName} [${j.citation}] (${j.bench}): "${j.ratio}"`).join("\n");
 
     navigator.clipboard.writeText(formatted);

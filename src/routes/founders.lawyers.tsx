@@ -11,7 +11,7 @@ import { toast } from "sonner";
 export const Route = createFileRoute("/founders/lawyers")({
   head: () => ({
     meta: [
-      { title: "Lawyer Management — TRANA Founders" },
+      { title: "Lawyer Management TRANA Founders" },
       { name: "description", content: "Review advocate applications, verify Bar Council Sanads, and track internal performance ratings." },
     ],
   }),

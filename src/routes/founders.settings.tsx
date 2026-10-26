@@ -11,7 +11,7 @@ import { toast } from "sonner";
 export const Route = createFileRoute("/founders/settings")({
   head: () => ({
     meta: [
-      { title: "Founders Settings & Flags — TRANA" },
+      { title: "Founders Settings & Flags TRANA" },
       { name: "description", content: "Access control, site-wide announcement banners, feature flags, and waitlist management." },
     ],
   }),

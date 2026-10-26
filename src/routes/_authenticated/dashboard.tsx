@@ -7,9 +7,9 @@ import { supabase } from "@/integrations/supabase/client";
 export const Route = createFileRoute("/_authenticated/dashboard")({
   head: () => ({
     meta: [
-      { title: "Dashboard — TRANA" },
+      { title: "Dashboard TRANA" },
       { name: "description", content: "Your TRANA legal first-aid dashboard." },
-      { property: "og:title", content: "Dashboard — TRANA" },
+      { property: "og:title", content: "Dashboard TRANA" },
       { property: "og:description", content: "Understand your situation and connect with a lawyer." },
     ],
   }),

@@ -12,7 +12,7 @@ import {
 export const Route = createFileRoute("/founders/health")({
   head: () => ({
     meta: [
-      { title: "Platform Health & Infrastructure — TRANA Founders" },
+      { title: "Platform Health & Infrastructure TRANA Founders" },
       { name: "description", content: "Real-time AI telemetry, API costs, database size, error rates, and usage charts." },
     ],
   }),
