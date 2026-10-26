@@ -62,28 +62,6 @@ function Index() {
         <p className="reveal mt-5 md:mt-8 max-w-md text-xs text-muted-foreground">{Disclaimer}</p>
       </section>
 
-      {/* Stats Bar */}
-      <section className="bg-[#111111] text-black py-5 md:py-6 border-y border-white/10">
-        <div className="mx-auto max-w-7xl px-4 md:px-6 flex flex-col md:flex-row items-center justify-between gap-5 md:gap-0">
-          <div className="flex-1 flex flex-col items-center text-center px-4">
-            <span className="font-sans text-sm md:text-base font-semibold tracking-wide text-black">BNS · BNSS · BSA</span>
-            <span className="font-sans text-xs md:text-sm font-light text-black/70 mt-0.5">All 3 New Laws Covered</span>
-          </div>
-          <div className="hidden md:block w-px h-8 bg-white/20 self-center" />
-          <div className="w-16 h-px bg-white/15 md:hidden" />
-          <div className="flex-1 flex flex-col items-center text-center px-4">
-            <span className="font-sans text-sm md:text-base font-semibold tracking-wide text-black">Hindi & English</span>
-            <span className="font-sans text-xs md:text-sm font-light text-black/70 mt-0.5">Bilingual Support</span>
-          </div>
-          <div className="hidden md:block w-px h-8 bg-white/20 self-center" />
-          <div className="w-16 h-px bg-white/15 md:hidden" />
-          <div className="flex-1 flex flex-col items-center text-center px-4">
-            <span className="font-sans text-sm md:text-base font-semibold tracking-wide text-black">Free to Start</span>
-            <span className="font-sans text-xs md:text-sm font-light text-black/70 mt-0.5">No Lawyer Fees to Understand Your Rights</span>
-          </div>
-        </div>
-      </section>
-
       {/* Who */}
       <section id="who" className="bg-paper py-10 md:py-28 text-ink">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
