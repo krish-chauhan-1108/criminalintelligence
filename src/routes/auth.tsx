@@ -74,7 +74,7 @@ function AuthPage() {
         <Link to="/" className="font-display text-3xl font-semibold tracking-[0.25em] text-foreground">TRANA</Link>
         <h1 className="mt-10 font-display text-4xl text-foreground">
           {mode === "in"
-            ? (dest?.includes("lawyer") ? "Welcome back lawyer" : "Welcome back")
+            ? (dest?.includes("lawyer") ? "Welcome back Counsel" : "Welcome back")
             : (dest?.includes("lawyer") ? "Create your lawyer account" : "Create your account")}
         </h1>
         <button onClick={google} className="btn-line mt-8 w-full">Continue with Google</button>
