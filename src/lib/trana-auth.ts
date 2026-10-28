@@ -84,6 +84,23 @@ export const useTranaCredential = (): AuthContextValue => {
             (session.user.user_metadata?.avatar_url as string) ||
             (session.user.user_metadata?.picture as string),
         });
+      } else if (typeof window !== "undefined") {
+        const devUserStr = localStorage.getItem("trana_dev_user");
+        if (devUserStr) {
+          try {
+            const devUser = JSON.parse(devUserStr);
+            setCredential("dev-token");
+            setUser({
+              id: devUser.id,
+              google_id: devUser.id,
+              email: devUser.email || "founder@trana.in",
+              name: devUser.user_metadata?.full_name || "Founder",
+              picture: undefined,
+            });
+          } catch {
+            // ignore
+          }
+        }
       }
       setLoading(false);
     });
@@ -107,8 +124,26 @@ export const useTranaCredential = (): AuthContextValue => {
             (session.user.user_metadata?.picture as string),
         });
       } else {
-        setCredential(null);
-        setUser(null);
+        const devUserStr = typeof window !== "undefined" ? localStorage.getItem("trana_dev_user") : null;
+        if (devUserStr) {
+          try {
+            const devUser = JSON.parse(devUserStr);
+            setCredential("dev-token");
+            setUser({
+              id: devUser.id,
+              google_id: devUser.id,
+              email: devUser.email || "founder@trana.in",
+              name: devUser.user_metadata?.full_name || "Founder",
+              picture: undefined,
+            });
+          } catch {
+            setCredential(null);
+            setUser(null);
+          }
+        } else {
+          setCredential(null);
+          setUser(null);
+        }
       }
       setLoading(false);
     });
@@ -124,6 +159,9 @@ export const useTranaCredential = (): AuthContextValue => {
     user,
     sessionExpiresAt: null,
     signOut: () => {
+      if (typeof window !== "undefined") {
+        localStorage.removeItem("trana_dev_user");
+      }
       supabase.auth.signOut();
     },
     loading,

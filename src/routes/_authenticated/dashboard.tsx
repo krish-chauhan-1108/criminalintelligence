@@ -46,6 +46,9 @@ function DashboardLayout() {
   async function signOut() {
     await qc.cancelQueries();
     qc.clear();
+    if (typeof window !== "undefined") {
+      localStorage.removeItem("trana_dev_user");
+    }
     await supabase.auth.signOut();
     navigate({ to: "/auth", replace: true });
   }
