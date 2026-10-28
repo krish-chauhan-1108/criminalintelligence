@@ -1,7 +1,7 @@
 import { createFileRoute, Link, Outlet, useLocation } from "@tanstack/react-router";
 import { useState, createContext, useContext } from "react";
 import { 
-  BarChart3, Users, Scale, Settings, Menu, X 
+  BarChart3, Users, Scale, Settings, Menu, X, ShieldCheck 
 } from "lucide-react";
 import { Toaster } from "@/components/ui/sonner";
 
@@ -39,6 +39,7 @@ const navItems = [
   { to: "/founders", label: "Overview", icon: BarChart3, exact: true },
   { to: "/founders/users", label: "Users", icon: Users },
   { to: "/founders/lawyers", label: "Lawyers", icon: Scale },
+  { to: "/founders/admin", label: "API Keys & Admin", icon: ShieldCheck },
   { to: "/founders/settings", label: "Settings", icon: Settings },
 ] as const;
 

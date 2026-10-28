@@ -18,6 +18,7 @@ export const Route = createFileRoute("/_authenticated/dashboard")({
 
 const nav = [
   { to: "/dashboard", label: "Home", exact: true },
+  { to: "/dashboard/chat", label: "Legal Chat" },
   { to: "/dashboard/analyse", label: "Analyse My Situation" },
   { to: "/dashboard/research", label: "Legal Research" },
   { to: "/dashboard/lawyers", label: "Find a Lawyer" },
