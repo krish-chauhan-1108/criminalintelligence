@@ -1,4 +1,4 @@
-# Logs
+# Log
 logs
 *.log
 npm-debug.log*
@@ -19,6 +19,7 @@ dist-ssr
 # Wrangler / Cloudflare
 .wrangler/
 .dev.vars
+.env
 
 # Editor directories and files
 .vscode/*
